@@ -1,0 +1,104 @@
+\documentclass[
+  12pt,
+  oneside,
+  openany,
+  draft,
+  % final,
+  ]{book}
+
+\usepackage[
+  letterpaper,
+  margin=2.2cm,
+]{geometry}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+\addto\captionsspanish{%
+  \renewcommand{\tablename}{Tabla}%
+  \renewcommand{\listtablename}{Índice de tablas}%
+}
+\usepackage[style=mexican]{csquotes}
+
+\usepackage{mathtools}
+\usepackage[
+math-style=ISO,
+warnings-off={mathtools-colon, mathtools-overbracket}
+]{unicode-math}
+
+\usepackage{siunitx}
+
+\DeclareDocumentCommand{\I}{}{\symup{i}}
+\DeclareDocumentCommand{\E}{}{\symup{e}}
+\DeclareDocumentCommand{\PI}{}{\uppi}
+
+\usepackage[
+backend=biber,
+style=numeric,
+]{biblatex}
+\addbibresource{refs.bib}
+
+\usepackage{array}
+
+\usepackage{booktabs}
+
+
+\usepackage[
+  fira,
+  ]{fontsetup}
+\usepackage[
+  babel=true,
+  disable=ifdraft,
+  ]{microtype}
+
+\usepackage{ragged2e}
+
+
+\usepackage{minted}
+
+
+\usepackage[
+  hidelinks,
+  ]{hyperref}
+\hypersetup{
+  pdftitle={Física y cuadernos computacionales},
+  pdfauthor={Nicolás Celedón Hernández},
+  pdfsubject={física},
+  pdfkeywords={notebook, jupyter, python, julia},
+  pdfdisplaydoctitle=true
+}
+
+\title{Física y cuadernos computacionales}
+\author{Nicolás {Celedón Hernández}}
+\date{v0.1.0}
+
+
+\begin{document}
+
+\frontmatter%
+
+\maketitle%
+
+\begin{titlepage}
+  \input{license.tex}
+\end{titlepage}
+
+\tableofcontents%
+
+\input{text/preface.tex}
+
+
+\mainmatter%
+
+\input{text/body.tex}
+
+
+\appendix
+
+\input{text/appendix.tex}
+
+
+\backmatter%
+
+\printbibliography%
+
+\end{document}
