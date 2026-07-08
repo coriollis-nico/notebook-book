@@ -6,12 +6,6 @@
   % final,
   ]{book}
 
-\usepackage[
-  letterpaper,
-  margin=2.2cm,
-  showframe,
-]{geometry}
-
 \usepackage{polyglossia}
 \setdefaultlanguage{spanish}
 \addto\captionsspanish{%
@@ -44,15 +38,16 @@ style=alphabetic,
 
 \usepackage{booktabs}
 
-
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
 \usepackage[
-  fira,
+  xcharter,
+  upint,
   ]{fontsetup}
 \usepackage[
   babel=true,
   disable=ifdraft,
   ]{microtype}
-\linespread{1.1}
 
 \usepackage{ragged2e}
 
