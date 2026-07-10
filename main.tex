@@ -8,12 +8,12 @@
 
 \usepackage[
   letterpaper,
-  margin=2.5cm,
-  showframe,
+  margin=2cm,
 ]{geometry}
 
 \usepackage{polyglossia}
-\setdefaultlanguage{spanish}
+\setdefaultlanguage[variant=mexican]{spanish}
+\PolyglossiaSetup{spanish}{indentfirst=false}
 \addto\captionsspanish{%
   \renewcommand{\tablename}{Tabla}%
   \renewcommand{\listtablename}{Índice de tablas}%
@@ -36,7 +36,7 @@ warnings-off={mathtools-colon, mathtools-overbracket}
 
 \usepackage[
 backend=biber,
-style=alphabetic,
+style=ieee,
 ]{biblatex}
 \addbibresource{refs.bib}
 
@@ -52,17 +52,18 @@ style=alphabetic,
   ]{fontsetup}
 \usepackage[
   babel=true,
-  disable=ifdraft,
+  % disable=ifdraft,
   ]{microtype}
 
 \usepackage{ragged2e}
 
 
+\usepackage[svgnames]{xcolor}
 \usepackage{minted}
-\usepackage[
-  svgnames,
-]{xcolor}
-
+\setminted{
+  bgcolor=WhiteSmoke,
+  style=bw,
+}
 
 % shortcuts
 \DeclareDocumentCommand{\software}{}{\textit{software}}
@@ -97,6 +98,10 @@ style=alphabetic,
 \end{titlepage}
 
 \tableofcontents%
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{%
+\medskipamount}
 
 \input{text/preface.tex}
 

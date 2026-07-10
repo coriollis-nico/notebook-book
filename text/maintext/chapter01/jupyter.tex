@@ -1,4 +1,190 @@
 \section{Jupyter en particular}
 
+Aquí comienzan los tutoriales en esta guía. Vamos a aprender a instalar Jupyter
+localmente y a escribir \notebooks~usando Python.
+
+La primera lección\footnote{
+  Estas lecciones estarán compiladas (ja ja) en el apéndice~\ref{sec:lessons}.
+} que quisiera compartir con quien lee estas notas es la siguiente:
+\begin{Center}
+  \emph{no debemos instalar globalmente herramientas científicas}.
+\end{Center}
+Es decir, \emph{no debemos de hacer} cosas como
+\begin{minted}{console}
+$ sudo dnf install python3 python3-matplotlib python3-numpy
+\end{minted}
+y no debemos usar \mintinline{bash}{pip}.
+Supongamos que queremos usar una biblioteca de Python específica para analizar datos
+astronómicos fotométricos con un formato particular. Cuando estos
+datos fueron capturados, la versión más nueva de Python era \texttt{2.7}, y por lo tanto esta
+herramienta está escrita en Python \texttt{2.7}, y no funciona con Python \texttt{3}.
+No será fácil para mí reemplazar la instalación de Python \texttt{3.x} ya instalada en mi
+sistema operativo, y si hiciera esta sustitución a la fuerza las otras aplicaciones en
+mi sistema dejarían de funcionar. El mismo problema puede ocurrir a la inversa: puedo
+requerir una función de Python añadida en la versión más nueva, pero tomará un tiempo
+para que los responsables del mantenimiento de mi sistema operativo validen que todas
+las aplicaciones importantes aún funcionan correctamente. Lo mismo aplica para las
+bibliotecas de Python utilizadas, para otros lenguajes interpretados, compiladores, y
+más. Esto también permite asegurarnos de que cambios en versiones nos impidan reproducir
+resultados pasados.
+
+Clarifico que las herramientas usadas para \emph{escribir} código no necesitan seguir
+esta regla. Yo uso Visual Studio Code para escribir código y algunos complementos para
+revisar y formatear mi código de Python y \LaTeX. En cambio, aquello que va a leer este
+código para generar resultados sí debe obedecer esta regla.
+
+Si no hemos de instalar herramientas globalmente, ¿qué hacemos?
+\begin{Center}
+  Crear ambientes reproducibles para cada proyecto.
+\end{Center}
+Instalamos el \software que necesitamos para un proyecto en un \emph{ambiente}, un rincón
+especial de nuestra computadora, sin interactuar con el resto del sistema, y al iniciar
+otro proyecto creamos \emph{otro} ambiente independiente del primero. Cambios en un
+proyecto no generarán problemas en otro.
+
+Una cosa más, que incluso podría estar de sobra, pero es extremadamente importante:
+\begin{Center}
+  usa \software~libre y gratuito, y usa formatos que se adhieran a estándares abiertos.
+\end{Center}
+Nadie a va pagar una licencia para comprar la herramienta que le permita ver tu proyecto.
+El \software~cerrado solo puede ser examinado y reparado por la desarrolladora, y
+la opacidad en el desarrollo de herramientas obstaculiza la reproducibilidad de
+resultados. Adicionalmente, mi código de Fortran funcionará si uso el compilador de GNU,
+Intel, Microsoft, Nvidia, LLVM, en macOS, Windows, Linux etc.\ porque Fortran sigue estándares
+abiertos.
+
+\subsection{Instalación y ejecución}
+
+Como corolario de la regla anterior, haremos nuestro trabajo en un entorno Unix
+(es decir, en Linux, o macOS\footnote{
+  Si tu sistema Unix favorito no está en esta lista, no necesitas mi ayuda para instalar
+  \software.
+}). Si has de trabajar en Windows, puedes usar WSL\footnote{
+  \url{https://learn.microsoft.com/es-mx/windows/wsl/}
+} y seguir las instrucciones en un entorno Linux dentro de Windows. No sobran tutoriales
+en linea sobre como instalar Linux.
+
+\begin{enumerate}
+  \setcounter{enumi}{-1}
+  \item Instalar conda-forge
+
+  Conda\footnote{
+    \url{https://conda.org/}
+  } es un \emph{gestor de paquetes}, i.e.\ se encarga de descargar, instalar y actualizar
+  \software, y se asegura que tengas las dependencias necesarias. El \emph{proveedor} de
+  \software\ por defecto al usar conda es Anaconda\footnote{
+    \url{https://www.anaconda.com/}
+    } pero para trabajo científico será mejor usar el canal conda-forge\footnote{
+      \url{https://conda-forge.org/}
+    }~\autocite{condaforge}. El canal conda-forge distribuye más \software, más reciente,
+    es liderado por su comunidad y sus licencias son más permisivas.
+
+    Sigue las instrucciones en el sitio para instalar la versión de Miniforge apropiada
+    para tu sistema. Asegúrate de seleccionar la versión adecuada para la arquitectura de
+    tu procesador. Para computadoras personales, tu arquitectura es casi seguramente
+    \texttt{x86\_64} \texttt{(amd64)}. En resumen:
+    \begin{enumerate}
+      \item descarga el instalador,
+
+      \item en la terminal\footnote{
+        Puedes encontrar un tutorial de la terminal de Linux (también útil en MacOS)
+        en
+        \url{https://ubuntu.com/desktop/docs/en/latest/tutorial/the-linux-command-line-for-beginners/}
+      }, abre el directorio (i.e.\ la carpeta) donde se encuentra la descarga
+      y ejecutala con \mintinline{bash}{bash}:
+      \begin{minted}{console}
+$ bash Miniforge3-Linux-x86-64.sh
+      \end{minted}
+
+      \item Aparecerá un breve acuerdo de licencia. Leelo y acéptalo (las condiciones son
+      sencillas y permisivas; nada de qué preocuparse).
+
+      \item El installador te pedirá elegir dónde instalar. El directorio por defecto
+      (tu carpeta \texttt{home}) es un buen lugar; realmente nunca tendrás que abrirlo
+      manualmente.
+
+      \item Al terminar encontrarás la siguiente notificación:
+      \blockquote{
+        ¿Deseas actualizar tu perfil de shell para inicializar conda automáticamente?
+        Esto activará conda al iniciar sesión y cambiará el prompt de comandos cuando esté activado.
+        Si prefieres que el entorno base de conda no se active al inicio,
+        ejecuta el siguiente comando cuando conda esté activado:
+        \mint{bash}{conda config --set auto_activate_base false}
+        Nota: Puedes deshacer esto más tarde ejecutando \mint{bash}{conda init --reverse $SHELL}
+        ¿Proceder con la inicialización? \texttt{[yes|no]}
+      }
+      Debes escribir \texttt{yes}.
+
+      \item Abre otra terminal y verás que la cadena \texttt{(base)} precede
+      a la linea del terminal:
+      \begin{minted}{console}
+(base) nch@localhost-live:~$
+      \end{minted}
+      Esto indica, como advertía la notificación anterior, que por default tus terminales
+      usarán un ambiente de conda. No queremos esto, queremos que nuestros ambientes de conda
+      estén separados. En este nuevo terminal ejecuta la linea indicada por la notificación:
+      \begin{minted}{console}
+$ conda config --set auto_activate_base false
+      \end{minted}
+      Las terminales que abras a partir de ahora no dirán \texttt{(base)}.
+      Sin embargo, ejecuta el comando
+      \begin{minted}{console}
+$ conda --version
+      \end{minted}
+      y confirma que conda está instalado en tu sistema.
+    \end{enumerate}
+
+    \item Crea el ambiente de trabajo con conda e instala el software que necesites.
+
+    En conda se distribuyen principalmente (pero no exclusivamente) versiones de Python
+    y de bibliotecas de Python que normalmente se descargarían, por ejemplo, usando
+    \mintinline{bash}{pip}. Crearemos un ambiente de conda donde instalaremos el \software
+    que usaremos a lo largo de esta guía:
+    \begin{minted}{console}
+$ conda create -n notebooks
+$ conda activate notebooks
+    \end{minted}
+    EL prefijo \texttt{(notebooks)} aparecerá, indicando que estás dentro de tu ambiente
+    de conda. Ahora instalemos el \software\ básico que usaremos:
+    \begin{minted}{console}
+(notebook) nch@localhost-live:~$ conda install python=3.14 numpy=2.5 \
+> matplotlib=3.11 jupyterlab=4.6
+    \end{minted}
+    (el símbolo \mintinline{console}{\} permite escribir comandos multi-linea).
+    El \software\ se instalará. Comprobemos la versión de Python instalada
+    \begin{minted}{console}
+(notebook) nch@localhost-live:~$ python --version
+Python 3.14.6
+(notebook) nch@localhost-live:~$ jupyter-lab --version
+4.6.1
+    \end{minted}
+    podría no coincidir con la instalada en nuestro sistema de manera global
+    (fuera de nuestro ambiente \texttt{notebook}). Podemos trabajar con este
+    \software\ sin que interfiera con el resto de nuestro sistema.
+
+    Como referencia, \texttt{=3} acepta cualquier versión \texttt{3.y.z},
+    \texttt{=4.6} acepta cualquier versión \texttt{4.6.x},
+    \texttt{=4.6.1} pide esa versión específica,
+    \texttt{>=4.6.1} aceptaría cualquier versión posterior y
+    \texttt{">=4.6.1,<5"} pide además versiones menores a \texttt{5.0.0}.
+    No usar especificadores instalará versiones recientes y compatibles entre sí.
+    Para preservar o compartir tu ambiente con otras personas, ejecuta
+    \begin{minted}{bash}
+conda env export --from-history --format txt > environment.txt
+    \end{minted}
+    y el archivo generado \texttt{environment.txt} contendrá los nombres
+    de los paquetes descargados y sus versiones (si las especificaste al descargar).
+    Ojo: si agregas más paquetes a tu ambiente, debes ejectar este comando de nuevo para
+    actualizar el archivo.
+
+    Recuerda que este ambiente solo está activo en este terminal. Al cerrarlo o al
+    abrir otro deberás volver a ejecutar \mintinline{bash}{conda activate notebooks}
+    para volver a acceder.
+
+    Este no es un tutorial de conea
+
+\end{enumerate}
+
+\subsection{Alternativas de ejecución}
 
 \subsection{Escritura de cuadernos}
