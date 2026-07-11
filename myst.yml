@@ -1,0 +1,39 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 2eab5fc1-c9de-4bb7-adcd-e046f3418cc1
+  title: Cuadernos Computacionales y Física
+  description: Usando Python y Jupyter para presentar soluciones a problemas de física
+  keywords: [física, python, jupyter, matplotlib, numpy, scipy]
+  authors:
+    - name: Nicolás Celedón-Hernández
+      affiliations:
+        - name: Facultad de Ciencias UNAM
+          department: Departamento de Física
+      email: nicolas.celedonh@ciencias.unam.mx
+      corresponding: true
+      github: coriollis-nico
+  license:
+    content: CC-BY-4.0
+    code: MIT
+  # github:
+  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  bibliography: refs.bib
+  toc:
+    - file: content/preface.md
+    - title: Cuadernos computacionales
+      file: content/maintext/01_notebooks.md
+      children:
+        - file: content/maintext/chapter01/general_notebooks.md
+        - file: content/maintext/chapter01/jupyter.md
+    - file: content/appendices/appendices.md
+      children:
+        - file: content/appendices/numerics.md
+        - file: content/appendices/hygene.md
+        - file: content/appendices/julia.md
+site:
+  template: book-theme
+  options:
+    favicon: favicon/favicon.ico
+    logo: favicon/android-chrome-512x512.png
+    logo_text: Cuadernos Computacionales y Física

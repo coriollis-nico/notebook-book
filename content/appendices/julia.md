@@ -1,4 +1,4 @@
-\chapter*{Julia: la mejor alternativa}
+# Julia: la mejor alternativa
 
 Apéndice secreto.
 

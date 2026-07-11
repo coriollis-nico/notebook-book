@@ -1,4 +1,4 @@
-\chapter{Cuadernos computacionales}
+# Cuadernos computacionales
 
 La comunidad científica fue de los primeros grupos en adoptar el uso profesional y a
 gran escala de computadoras electrónicas.
@@ -10,31 +10,30 @@ el uso correcto de computadoras y con cómputo científico básico.
 
 Hoy en día, el cómputo científico se encuentra en una intersección particular, a veces
 desafortunada.
-Para escribir código científico se requiere tanto \emph{conocimiento de desarrollo de software}
-como \emph{conocimiento de dominio científico}, para implementar y validar lo que se desea
+Para escribir código científico se requiere tanto _conocimiento de desarrollo de software_
+como _conocimiento de dominio científico_, para implementar y validar lo que se desea
 obtener.
-Una persona típica que desarrolla \software~es experta en escribir código
+Una persona típica que desarrolla _software_ es experta en escribir código
 utilizable, eficiente y mantenible.
 Una persona que se dedica a la ciencia es experta en su dominio, y puede describir
 con formalidad los objetos y modelos de su interés.
-El conocimiento de ambas tiene \textit{a priori} una intersección vacía.\footnote{
-  Ver por ejemplo
-  \url{https://youtu.be/gWddFxOXefo?si=_hL469iAiF7LtahM} y
-  \url{https://youtu.be/6m6ZkafwGDs?si=KBR94UFrty_E30EY}
-  para una discusión informal en el contexto de resultados matemáticos.
-}
+El conocimiento de ambas tiene _a priori_ una intersección vacía.[^pri]
 Tal vez la persona científica esté familiarizada con herramientas computacionales de uso común
 en su especialidad, pero hay una gran diferencia entre código que sirve para uso personal
 y código apto para ser escrutinizado y reutilizado por otras personas (no se hable sobre
 poder reproducir los resultados de otras personas).
 
+[^pri]: Ver por ejemplo https://youtu.be/gWddFxOXefo?si=_hL469iAiF7LtahM y
+  https://youtu.be/6m6ZkafwGDs?si=KBR94UFrty_E30EY para una discusión informal en el
+  contexto de resultados matemáticos.
+
 Pensemos además en las diferencias entre la forma tradicional de presentar un resultado
-científico y de presentar un proyecto de \software. Muchas veces, el estado del software
+científico y de presentar un proyecto de _software_. Muchas veces, el estado del software
 no es tan interesante para la comunidad---importan más los resultados obtenidos, su análisis
 y su interpretación. Al mismo tiempo, como cualquier parte de la metodología de una
 investigación, el código fuente de un proyecto debe ser escrutinizable.
 Considerando todo esto, personalmente no me gustaría tener que revisar un archivo
-\texttt{.c}, \texttt{.py} o \texttt{.f90} de \num{500} líneas de código y \num{2000} líneas
+`.c`, `.py` o `.f90` de 500 líneas de código y 2,000 líneas
 de comentarios explicando cómo funciona el programa y cómo usarlo.
 
 En contextos académicos, las formas por excelencia de presentar trabajo,
@@ -50,7 +49,3 @@ Sería ideal, entonces, un formato que permitiera combinar la claridad de la pro
 explicativa con la ejecución del código relevante, en la misma forma en que se combinan
 prosa y ecuaciones en documentos científicos. Este es exactamente el formato del
 cuaderno computacional.
-
-\input{text/maintext/chapter01/general_notebooks.tex}
-
-\input{text/maintext/chapter01/jupyter.tex}
