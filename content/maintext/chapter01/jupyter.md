@@ -26,7 +26,7 @@ bibliotecas de Python utilizadas, para otros lenguajes interpretados, compilador
 más. Esto también permite asegurarnos de que cambios en versiones nos impidan reproducir
 resultados pasados.
 
-[^lesson]: Estas lecciones estarán compiladas (ja ja) en el apéndice ...
+[^lesson]: Estas lecciones estarán compiladas (ja ja) en el [apéndice](hygene).
 
 Clarifico que las herramientas usadas para *escribir* código no necesitan seguir
 esta regla. Yo uso Visual Studio Code para escribir código y algunos complementos para
