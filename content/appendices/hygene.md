@@ -1,6 +1,6 @@
 # Buenas prácticas en programación
 
-Recomiendo a todo mundo leer @Datseris2025.
+Recomiendo a todo mundo leer @Datseris2025. Fue el contenido más informativo para mí.
 
 - Usar software libre y estándares abiertos.
 
