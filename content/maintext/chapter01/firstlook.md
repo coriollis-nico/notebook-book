@@ -77,3 +77,202 @@ Lxs usuarios no tienen control sobre cuándo y a qué versión se actualizan las
 Finalmente, Google tiene fama de [matar proyectos](https://killedbygoogle.com/)
 sin aviso previo, populares o no. Si usaras Colab, al menos debes saber cómo usar
 _notebooks_ por tu cuenta por si acaso.
+
+
+## Interacción básica
+
+Los _notebooks_ consisten principalmente de código y prosa (Markdown). Hablemos de cada
+una.
+
+
+### Código
+
+El contenido de los notebooks se dividen principalmente en *celdas*.
+Pruébalo: abre un cuaderno en la interfaz de tu preferencia, y en la primera celda
+escribe
+
+```python
+name = "Cecilia"  # o tu propio nombre
+print("¡Hola, {}!".format(name))
+```
+y presiona `Ctrl+Enter`. Esto ejecutará el código que escribiste y mostrara la salida
+abajo de la celda:
+
+```
+!Hola, Cecilia!
+```
+
+(Si en vez de ejecutar el código solo lo renderiza como Markdown, asegúrate que la
+celda esté en modo Python o modo código.)
+
+Observa debajo de la celda o a la derecha. Encontrarás un botón para crear una nueva
+celda debajo. En esta escribe
+
+```python
+print("¿Qué letras en mi nombre son minúsculas? \n")
+for char in name:
+  print(char, "-", char.islower())
+```
+
+y presiona `Shift+Enter`.
+
+```
+¿Qué letras en mi nombre son minúsculas?
+
+C - False
+e - True
+c - True
+i - True
+l - True
+i - True
+a - True
+```
+
+Te darás cuenta de que la variable `name` que definiste en la celda anterior *aún está
+definida en la celda siguiente*. Cuando ejecutes un _notebook_ las variables y estados
+que definas persistirán hasta que lo reinicies o lo cierres.
+También nota que al usar `Shift+Enter`, o se seleccionó automaticamente la celda de abajo,
+o se creo una nueva si no existía ya. Una atajo más: `Alt+Enter` ejecuta la celda
+seleccionada y crea una celda debajo aunque ya exista otra.
+
+Ahora regresa a la primera celda y cambia el nombre. Ejecuta esa celda.
+Deberías ver algo como
+
+```ipython
+[3] name = "David"
+    print("Hola, {}!".format(name))
+```
+
+```
+Hola, David!
+```
+
+```ipython
+[2] print("¿Qué letras en mi nombre son minúsculas? \n")
+    for char in name:
+      print(char, "-", char.islower())
+```
+
+```
+¿Qué letras en mi nombre son minúsculas?
+
+C - False
+e - True
+c - True
+i - True
+l - True
+i - True
+a - True
+```
+
+A pesar de que la primera celda ahora dice `David`, la segunda
+(que en principio dependía de la primera) aun dice `Cecilia`.
+El *núcleo* del _notebook_ ejecuta la primera celda editada *después* de haber
+ejecutado el código en el que `name = "Cecilia"`. Para el núcleo, la primera celda
+editada es un tercer bloque de código; no importa en qué posición del cuaderno
+esté colocado, sólo importa en qué orden lo ejecutemos nosotrxs.
+
+Recapitulemos:
+
+- el código en el _notebook_ se divide en celdas,
+
+- el código en celdas puede depender de código ejecutado previamente en otras celdas,
+
+- el orden visual de las celdas no importa; solo importa en qué orden lo ejecutemos.
+
+Este nos permite escribir y probar nuestro código por partes, en lugar de tener que
+probarlo incrementalmente o todo a la vez.
+Te invito a que experimentes para que internalizes estas reglas.
+
+Por supuesto, esto puede resultar en errores cuando se pierde el hilo de qué se ha
+ejecutado y cuántas veces. La solución es sencilla; hay botones en todos los editores
+para reiniciar el núcleo del cuaderno y para ejecutar todas las celdas en orden.
+Estos botones son fáciles de encontrar en todas las interfaces; búsca dónde están
+en tu editor y pruébalos también.
+
+Esta no-linealidad es útil al prototipar; sin embargo, tengamos el siguiente tip en
+mente:
+
+:::{tip} Lección de programación
+Para verificar y confiar en tus tus resultados, reinicia y ejecuta tu _notebook_ en
+orden.
+:::
+
+Sería vergonzoso creer que ha demostrado que un algoritmo funciona, cuando en realidad
+no te diste cuenta que lo ejecutaste quince veces en lugar de una sola. También sería
+terrible sufrir buscando un _bug_ en tu trabajo, solo para darte cuenta que tu código
+está bien pero realizaste una división cinco veces en vez de una vez.
+
+
+### Markdown
+
+Otra de las grandes conveniencias de usar _notebooks_ es poder combinar código con
+prosa y el formato de esta prosa es el estandar Markdown[^md].
+Prueba crear una celda hasta arriba de tu cuaderno y escribe
+
+```markdown
+# Mi primer cuaderno
+
+## Preámbulo
+
+En esta celda pruebo las funciones Markdown
+```
+
+y ejecuta con `Ctrl+Enter`. Este texto ahora aparecerá más bonito. La sintaxis
+básica es
+
+| Sintaxis | Descripción |
+|---|---|
+| `# Texto` | Encabezado 1 |
+| `## Texto` | Encabezado 2 |
+| `**texto**` | Negrita |
+| `*texto*` | Cursiva |
+| `~~texto~~` | Tachado |
+| `` `código` `` | Código en línea |
+| `> texto` | Cita en bloque |
+| `- item` | Lista no ordenada |
+| `1. item` | Lista ordenada |
+| `[texto](url)` | Enlace |
+| `![alt](url)` | Imagen |
+| `` ``` `` | Bloque de código |
+| `---` | Línea horizontal |
+| `\| a \| b \|` | Tabla |
+| `- [ ] tarea` | Checkbox |
+
+<!-- Tabla generada con Claude -->
+
+Adicionalmente, puedes insertar ecuaciones matemáticas con sintaxis de $\LaTeX$.
+Crea una nueva celda al final de tu cuaderno y conviértela a formato Markdown.
+Busca cómo hacerlo en tu interface, y en cualquier caso, puedes presionar
+`Ctrl+m` para convertirla. En esta escribe
+
+```markdown
+Para finalizar, una ecuación (aunque el código no lo necesite):
+
+$$
+  a^2 + b^2 = c^2
+$$
+```
+
+y ejecútala. Debería renderizarse algo como
+
+Para finalizar, una ecuación (aunque el código no lo necesite):
+
+$$
+\begin{equation*}
+  a^2 + b^2 = c^2
+\end{equation*}
+$$
+
+También puedes tener ecuaciones en la prosa: `$\pi$` se vuelve $\pi$, etc.
+
+Puedes observar el cuaderno renderizado [aquí](first). Inmediatamente vemos que
+el formato de _notebook_ se adapta muy bien a presentaciones en linea.
+
+[^md]: Encuentra una guía rápida en https://www.markdownguide.org/.
+
+
+_Et voilà_, conocemos el funcionamiento básico de cuadernos Jupyter.
+Podemos juntar prosa, matemáticas y código en un formato legible por humanos
+y que incluye  el código utilizado. Estos cuadernos se pueden distrubir en una variedad
+de formatos---estáticos y ejecutables---pero veremos cómo hacerlo después.
