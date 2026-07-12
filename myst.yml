@@ -29,7 +29,6 @@ project:
         - file: content/maintext/chapter01/firstlook.md
           children:
             - file: notebooks/first.ipynb
-            - file: notebooks/prueba.ipynb
     - file: content/appendices/appendices.md
       children:
         - file: content/appendices/numerics.md
