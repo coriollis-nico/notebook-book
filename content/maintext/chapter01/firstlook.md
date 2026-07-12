@@ -207,7 +207,7 @@ está bien pero realizaste una división cinco veces en vez de una vez.
 ### Markdown
 
 Otra de las grandes conveniencias de usar _notebooks_ es poder combinar código con
-prosa y el formato de esta prosa es el estandar Markdown[^md].
+prosa y el formato de esta prosa es el estandar [Markdown](https://commonmark.org/help/).
 Prueba crear una celda hasta arriba de tu cuaderno y escribe
 
 ```markdown
@@ -218,28 +218,7 @@ Prueba crear una celda hasta arriba de tu cuaderno y escribe
 En esta celda pruebo las funciones Markdown
 ```
 
-y ejecuta con `Ctrl+Enter`. Este texto ahora aparecerá más bonito. La sintaxis
-básica es
-
-| Sintaxis | Descripción |
-|---|---|
-| `# Texto` | Encabezado 1 |
-| `## Texto` | Encabezado 2 |
-| `**texto**` | Negrita |
-| `*texto*` | Cursiva |
-| `~~texto~~` | Tachado |
-| `` `código` `` | Código en línea |
-| `> texto` | Cita en bloque |
-| `- item` | Lista no ordenada |
-| `1. item` | Lista ordenada |
-| `[texto](url)` | Enlace |
-| `![alt](url)` | Imagen |
-| `` ``` `` | Bloque de código |
-| `---` | Línea horizontal |
-| `\| a \| b \|` | Tabla |
-| `- [ ] tarea` | Checkbox |
-
-<!-- Tabla generada con Claude -->
+y ejecuta con `Ctrl+Enter`.
 
 Adicionalmente, puedes insertar ecuaciones matemáticas con sintaxis de $\LaTeX$.
 Crea una nueva celda al final de tu cuaderno y conviértela a formato Markdown.
@@ -254,7 +233,9 @@ $$
 $$
 ```
 
-y ejecútala. Debería renderizarse algo como
+y ejecútala. Debería renderizarse algo como:
+
+---
 
 Para finalizar, una ecuación (aunque el código no lo necesite):
 
@@ -264,13 +245,12 @@ $$
 \end{equation*}
 $$
 
+---
+
 También puedes tener ecuaciones en la prosa: `$\pi$` se vuelve $\pi$, etc.
 
 Puedes observar el cuaderno renderizado [aquí](first). Inmediatamente vemos que
 el formato de _notebook_ se adapta muy bien a presentaciones en linea.
-
-[^md]: Encuentra una guía rápida en https://www.markdownguide.org/.
-
 
 _Et voilà_, conocemos el funcionamiento básico de cuadernos Jupyter.
 Podemos juntar prosa, matemáticas y código en un formato legible por humanos
