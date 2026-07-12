@@ -256,3 +256,6 @@ _Et voilà_, conocemos el funcionamiento básico de cuadernos Jupyter.
 Podemos juntar prosa, matemáticas y código en un formato legible por humanos
 y que incluye  el código utilizado. Estos cuadernos se pueden distrubir en una variedad
 de formatos---estáticos y ejecutables---pero veremos cómo hacerlo después.
+
+El siguiente paso es aprender a usar NumPy y Matplotlib como herramientas
+_stand-alone_ y dentro de _notebooks_.
