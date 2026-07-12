@@ -110,4 +110,4 @@ sustanciales del software. Se proporciona "tal cual", sin garantía de ningún t
 
 [^unix]: Si tu sistema favorito `UNIX` no está en esta lista, no necesitas mi ayuda.
 
-[^WSL]: https://learn.microsoft.com/es-mx/windows/wsl/install
+[^WSL]: https://learn.microsoft.com/es-mx/windows/wsl/
