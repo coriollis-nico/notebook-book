@@ -30,7 +30,11 @@ en física.
   abiertos.
 
   Si ya usas Linux o MacOS, perfecto. Si usas Windows puedes migrar a Linux
-  o usar WSL[^WSL]. Existen muchos tutoriales en línea sobre ambas opciones.
+  o usar WSL[^WSL]. Si no sabes qué es Linux o cómo instalarlo, no te compliques la vida;
+  usa [Linux Mint](https://linuxmint.com/)
+  (después de ver esta guía [esta guía en español](https://youtu.be/F8fIfx5WDxQ?si=6BreSCtTqVl42_fm)).
+  Si necesitas más ayuda, acércate a tu amigx nerd o a tu profesorx. Te ayudarán con
+  entusiasmo.
 
 - **Experiencia con Python** (al menos un poco)
 
