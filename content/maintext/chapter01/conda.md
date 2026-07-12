@@ -61,7 +61,7 @@ Descarga el instalador, bre el directorio (i.e. la carpeta) donde se encuentra l
 y ejecutala con `bash`:
 
 ```shell
-$ bash Miniforge3-Linux-x86-64.sh
+$ bash Miniforge3-Linux-x86_64.sh
 ```
 
 Aparecerá un breve acuerdo de licencia. Leelo y acéptalo (las condiciones son
