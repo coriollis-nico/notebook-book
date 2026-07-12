@@ -29,6 +29,7 @@ project:
         - file: content/maintext/chapter01/firstlook.md
           children:
             - file: notebooks/first.ipynb
+    - file: content/maintext/02_tools.md
     - file: content/appendices/appendices.md
       children:
         - file: content/appendices/numerics.md
