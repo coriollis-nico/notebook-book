@@ -22,7 +22,7 @@ en física.
   El trabajo científico debe ser compartible, reproducible y escrutinizable.
   El _software_ libre (o al menos que obedece estándares abiertos, como MacOS)
   prácticamente garantiza estas características.
-  Nadie a va pagar una licencia para comprar la herramienta que le permita ver tu proyecto.
+  Nadie va a pagar una licencia para comprar la herramienta que le permita ver tu proyecto.
   El _software_ cerrado solo puede ser examinado y reparado por la desarrolladora, y
   la opacidad en el desarrollo de herramientas obstaculiza la reproducibilidad de
   resultados. Adicionalmente, mi código de Fortran funcionará si uso el compilador de GNU,
@@ -30,7 +30,7 @@ en física.
   abiertos.
 
   Si ya usas Linux o MacOS, perfecto. Si usas Windows puedes migrar a Linux
-  o usar WSL[^WSL]. Existen muchos tutoriales en linea sobre ambas opciones.
+  o usar WSL[^WSL]. Existen muchos tutoriales en línea sobre ambas opciones.
 
 - **Experiencia con Python** (al menos un poco)
 
@@ -62,7 +62,7 @@ en física.
 
 - **Competencia en física y matemáticas**
 
-  Esta guía es sobre herramientas numéricas y de visualizacion, por lo que asumiré que
+  Esta guía es sobre herramientas numéricas y de visualización, por lo que asumiré que
   entiendes la física en los ejemplos. Citaré libros didácticos en cada ejemplo.
 
 No puedo evitar que uses "inteligencia artificial"
@@ -90,7 +90,7 @@ Como referencia, el ambiente local en el que escribí y probé el código en est
 - SciencePlots `2.2.2`
 
 Introduciremos estas herramientas a lo largo del texto.
-Dependiendo de cuándo se lea esta guía, las versiones más recientes del software pueden
+Dependiendo de cuándo se lea esta guía, las versiones más recientes del _software_ pueden
 ser otras. Normalmente, mientras la versión mayor (la `x` en `x.y.z`) no haya cambiado,
 el contenido debería seguir siendo útil.
 
@@ -99,12 +99,12 @@ el contenido debería seguir siendo útil.
 Esta obra está bajo una licencia Creative Commons Atribución 4.0 Internacional.
 Para ver una copia de esta licencia, visite https://creativecommons.org/licenses/by/4.0/deed.es
 
-El código en esta guía y en el repositiorio está bajo licencia `MIT`.
+El código en esta guía y en el repositorio está bajo licencia `MIT`.
 Lea `LICENSE.txt` en el repositorio de este proyecto.
 En resumen, puedes usar, copiar, modificar, fusionar, publicar, distribuir,
 sublicenciar y vender copias del _software_ libremente, con la única condición
 de incluir el aviso de _copyright_ y esta licencia en las copias o partes
-sustanciales del software. Se proporciona "tal cual", sin garantía de ningún tipo.
+sustanciales del _software_. Se proporciona "tal cual", sin garantía de ningún tipo.
 
 
 

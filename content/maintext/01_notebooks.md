@@ -28,7 +28,7 @@ poder reproducir los resultados de otras personas).
   contexto de resultados matemáticos.
 
 Pensemos además en las diferencias entre la forma tradicional de presentar un resultado
-científico y de presentar un proyecto de _software_. Muchas veces, el estado del software
+científico y de presentar un proyecto de _software_. Muchas veces, el estado del _software_
 no es tan interesante para la comunidad---importan más los resultados obtenidos, su análisis
 y su interpretación. Al mismo tiempo, como cualquier parte de la metodología de una
 investigación, el código fuente de un proyecto debe ser escrutinizable.
