@@ -9,7 +9,7 @@ de los cuadernos en sí.
 
 ### Jupyter Lab
 
-Jupyter Lab es actualmente la herramienta desarrollada por el proyecto Jupyter
+Jupyter Lab es actualmente la herramienta desarrollada por el proyecto Jupyter [-@Granger2021]
 para interactuar con _notebooks_ localmente.
 Jupyer Lab (igual que Jupyter Notebook, la herramienta ligeramente más vieja) funciona
 abriéndose en un navegador de internet.
