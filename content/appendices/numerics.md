@@ -1,11 +1,9 @@
 # Métodos numéricos en Python
 
-holi
+## Diferenciación
 
-## Recetas numéricas
 
-mhmmm
+## Integración y ecuaciones diferenciales ordinarias
 
-## NumPy y SciPy
 
-tsssst
+## Ecuaciones diferenciales parciales
