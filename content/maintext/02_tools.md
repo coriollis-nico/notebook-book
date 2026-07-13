@@ -1,16 +1,5 @@
 # Las herramientas del cómputo científico
 
-::: {seealso} Sobre las fuentes
-El contenido en esta sección y subsecciones le debe *mucho* a @Ayars2013.
-En cuanto aplicaciones a la física, el libro es una introducción
-muy completa y accesible. Sus únicas desventajas son que no está oficialmente
-distribuido o publicado, que la sintaxis del código en el libro esta un poco
-desactualizada, y no discute temas de _cuadernos_ o reproducibilidad.
-
-Te recomiendo mucho que lo busques y lo consultes de vez en cuando, a conciencia de que
-no todo lo que recomienda sigue siendo buena praxis en 2026.
-:::
-
 Podemos categorizar las herramientas del cómputo científico en dos:
 *implementaciones de algoritmos matemáticos y científicos* (incluyendo métodos numéricos,
 estadísticos, de categorización, etc.) y de *visualización*.
@@ -45,6 +34,19 @@ encantaría presentar aquí los métodos numéricos básicos, pero ese no es el 
 estas notas. Aún así, hablaré un poco de los algoritmos relevantes en el apéndice de
 este trabajo.
 
+
 [^pytut]: Ver la [documentación de Python](https://docs.python.org/3/tutorial/index.html)
 
 [^graf]: Módulos como `turtle` no cuentan...
+
+
+::: {seealso} Sobre las fuentes
+El contenido en esta sección y subsecciones le debe *mucho* a @Ayars2013.
+En cuanto aplicaciones a la física, el libro es una introducción
+muy completa y accesible. Sus únicas desventajas son que no está oficialmente
+distribuido o publicado, que la sintaxis del código en el libro esta un poco
+desactualizada, y no discute temas de _cuadernos_ o reproducibilidad.
+
+Te recomiendo mucho que lo busques y lo consultes de vez en cuando, a conciencia de que
+no todo lo que recomienda sigue siendo buena praxis en 2026.
+:::
