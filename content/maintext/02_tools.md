@@ -1,7 +1,7 @@
 # Las herramientas del cómputo científico
 
 ::: {seealso} Sobre las fuentes
-El contenido en esta sección y subsecciones le debe mucho a @Ayars2013.
+El contenido en esta sección y subsecciones le debe *mucho* a @Ayars2013.
 En cuanto aplicaciones a la física, el libro es una introducción
 muy completa y accesible. Sus únicas desventajas son que no está oficialmente
 distribuido o publicado, que la sintaxis del código en el libro esta un poco
