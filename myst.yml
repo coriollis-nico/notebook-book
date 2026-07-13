@@ -24,12 +24,13 @@ project:
     - title: Cuadernos computacionales
       file: content/maintext/01_notebooks.md
       children:
-        - file: content/maintext/chapter01/general_notebooks.md
         - file: content/maintext/chapter01/conda.md
         - file: content/maintext/chapter01/firstlook.md
           children:
             - file: notebooks/first.ipynb
     - file: content/maintext/02_tools.md
+      children:
+        - file: content/maintext/chapter02/numpy.ipynb
     - file: content/appendices/appendices.md
       children:
         - file: content/appendices/numerics.md
