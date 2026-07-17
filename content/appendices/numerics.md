@@ -12,5 +12,12 @@ También recomiendo @Sauer2012; que me ayudó mucho cuando escribía mi tesis.
 
 ## Integración y ecuaciones diferenciales ordinarias
 
+### Ecuaciones diferenciales ordinarias
+
+### Integración
+
+#### Sumas de Riemann
+
+#### Método de Simpson
 
 ## Ecuaciones diferenciales parciales
