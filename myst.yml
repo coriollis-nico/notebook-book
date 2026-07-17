@@ -43,6 +43,8 @@ project:
         - file: content/appendices/numerics.md
         - file: content/appendices/hygene.md
         - file: content/appendices/julia.md
+  numbering:
+    equations: false
 site:
   template: book-theme
   options:

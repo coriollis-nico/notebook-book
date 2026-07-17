@@ -240,9 +240,7 @@ y ejecútala. Debería renderizarse algo como:
 Para finalizar, una ecuación (aunque el código no lo necesite):
 
 $$
-\begin{equation*}
   a^2 + b^2 = c^2
-\end{equation*}
 $$
 
 ---
