@@ -9,10 +9,11 @@ También recomiendo @Sauer2012; que me ayudó mucho cuando escribía mi tesis.
 
 ## Diferenciación
 
-
 ## Integración y ecuaciones diferenciales ordinarias
 
 ### Ecuaciones diferenciales ordinarias
+
+#### Métodod de Euler
 
 ### Integración
 
