@@ -61,8 +61,9 @@ en física.
 - **Uso de la terminal** de tu sistema operativo
 
   Si usas Linux o WSL, recomiendo
-  [el tutorial en la documentación de Ubuntu](https://ubuntu.com/desktop/docs/en/latest/tutorial/the-linux-command-line-for-beginners/). También debería funcionar, al menos un poco,
-  para MacOS. También necesitarás una introducción rápida a la terminal de Windows si usas WSL.
+  [el tutorial en la documentación de Ubuntu](https://ubuntu.com/desktop/docs/en/latest/tutorial/the-linux-command-line-for-beginners/).
+  También debería funcionar, al menos un poco, para MacOS.
+  También necesitarás una introducción rápida a la terminal de Windows si usas WSL.
 
 - **Competencia en física y matemáticas**
 
