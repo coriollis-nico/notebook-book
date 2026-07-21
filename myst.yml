@@ -33,13 +33,12 @@ project:
         - file: content/maintext/chapter02/math.ipynb
           children:
             - file: content/maintext/chapter02/examples/01_combinatorics.ipynb
-            - file: content/maintext/chapter02/examples/02_vecmec.ipynb
+            - file: content/maintext/chapter02/examples/02_hooke.ipynb
             - file: content/maintext/chapter02/examples/03_thermo.ipynb
             - file: content/maintext/chapter02/examples/04_em.ipynb
-            - file: content/maintext/chapter02/examples/05_hooke.ipynb
-            - file: content/maintext/chapter02/examples/06_pendulum.ipynb
-            - file: content/maintext/chapter02/examples/07_pendulum_pt2.ipynb
-            - file: content/maintext/chapter02/examples/08_matrices.ipynb
+            - file: content/maintext/chapter02/examples/05_pendulum_pt1.ipynb
+            - file: content/maintext/chapter02/examples/06_pendulum_pt2.ipynb
+            - file: content/maintext/chapter02/examples/07_matrices.ipynb
     - file: content/appendices/appendices.md
       children:
         - file: content/appendices/numerics.md
