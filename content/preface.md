@@ -29,11 +29,12 @@ en física.
   Intel, Microsoft, Nvidia, LLVM, en macOS, Windows, Linux etc. porque Fortran sigue estándares
   abiertos.
 
-  Si ya usas Linux o MacOS, perfecto. Si usas Windows puedes migrar a Linux
-  o usar WSL[^WSL]. Si no sabes qué es Linux o cómo instalarlo, no te compliques la vida;
+  Si ya usas Linux o MacOS, perfecto.
+  Si no sabes qué es Linux o cómo instalarlo, no te compliques la vida;
   usa [Linux Mint](https://linuxmint.com/)
-  (después de ver esta guía [esta guía en español](https://youtu.be/F8fIfx5WDxQ?si=6BreSCtTqVl42_fm)).
-  Si necesitas más ayuda, acércate a tu amigx nerd o a tu profesorx. Te ayudarán con
+  (después de ver [esta guía en español](https://youtu.be/F8fIfx5WDxQ?si=6BreSCtTqVl42_fm))
+  o usa [WSL](https://learn.microsoft.com/es-mx/windows/wsl/).
+  Si necesitas más ayuda, acércate a tu amigx o profesorx. Te ayudarán con
   entusiasmo.
 
 - **Experiencia con Python** (al menos un poco)
@@ -46,17 +47,19 @@ en física.
   Sin embargo, no todo lo que se ve en videos y foros es un buen consejo, y el
   conocimiento desorganizado no permite construir herramientas más complejas.
   Recomiendo a quien lee estas notas que antes de comenzar revise un breve tutorial
-  sobre uso general de Python[^pytut].
-  Para gente con un poco más de experiencia, el tutorial oficial de Python[^pytuto]
-  es maravilloso. También hay una introducción concisa en @EspejelMorales2019.
-
-  [^pytut]: Por ejemplo, https://python.swaroopch.com/.
-
-  [^pytuto]: https://docs.python.org/3/tutorial/index.html.
+  sobre programación básica y Python[^py].
+  También hay una introducción concisa en @EspejelMorales2019.
+  Para gente que sabe lo básico de programación,
+  el [tutorial oficial de Python](https://docs.python.org/3/tutorial/index.html)
+  es maravilloso.
 
   No recomiendo más libros específicos porque no he leído ninguno y no recomiendo videos
   porque no me gustan, pero si quien lee este documento tiene una referencia preferida,
   probablemente le funcionará muy bien también.
+
+[^py]: Tal vez un curso de Codecademy, o un libro como
+  [Python Crash Course (Matthes, 3a ed.)](https://nostarch.com/python-crash-course-3rd-edition)
+  (_yo no lo he leído_, pero se ve bien).
 
 - **Uso de la terminal** de tu sistema operativo
 
@@ -75,8 +78,8 @@ en tus proyectos, pero puedo invitarte a que tú leas la documentación oficial 
 intentes hacer las cosas tú mismo **antes** de recurrir al _chatbot_.[^IA]
 
 [^IA]: El costo de usar _chatbots_ con demasiada frecuencia es llamado
-  *deuda cognitiva*. Ver, por ejemplo, https://youtu.be/KhBsHoiiorM?si=r7pDtMGvyxs8AtOI
-  en contextos académicos y https://youtu.be/HTUh0OO6Kmo?si=IZIKbP6Ri3nkkWWf en contextos
+  *deuda cognitiva*. Ver, por ejemplo, [el famoso estudio realizado por MIT](https://youtu.be/7pqF90rstZQ?si=3YSJ9I_4PLZuC8vu)
+  en contextos académicos y [esta discusión](https://youtu.be/HTUh0OO6Kmo?si=IZIKbP6Ri3nkkWWf) en contextos
   de programación.
 
 ## Manifiesto de paquetes
@@ -102,7 +105,8 @@ el contenido debería seguir siendo útil.
 ## Licencias
 
 Esta obra está bajo una licencia Creative Commons Atribución 4.0 Internacional.
-Para ver una copia de esta licencia, visite https://creativecommons.org/licenses/by/4.0/deed.es
+Para ver una copia de esta licencia,
+visita [este sitio.](https://creativecommons.org/licenses/by/4.0/deed.es)
 
 El código en esta guía y en el repositorio está bajo licencia `MIT`.
 Lea `LICENSE.txt` en el repositorio de este proyecto.
@@ -114,5 +118,3 @@ sustanciales del _software_. Se proporciona "tal cual", sin garantía de ningún
 
 
 [^unix]: Si tu sistema favorito `UNIX` no está en esta lista, no necesitas mi ayuda.
-
-[^WSL]: https://learn.microsoft.com/es-mx/windows/wsl/

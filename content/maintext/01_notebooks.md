@@ -23,9 +23,11 @@ en su especialidad, pero hay una gran diferencia entre código que sirve para us
 y código apto para ser escrutinizado y reutilizado por otras personas (no se hable sobre
 poder reproducir los resultados de otras personas).
 
-[^pri]: Ver por ejemplo https://youtu.be/gWddFxOXefo?si=_hL469iAiF7LtahM y
-  https://youtu.be/6m6ZkafwGDs?si=KBR94UFrty_E30EY para una discusión informal en el
-  contexto de resultados matemáticos.
+[^pri]: Ver por ejemplo
+  [_Can Mathematicians Code? The Intermediate Value Theorem_ (YouTube)](https://youtu.be/gWddFxOXefo?si=_hL469iAiF7LtahM)
+  y
+  [_Can programmers do math? What is a real number, really_ (YouTube)](https://youtu.be/6m6ZkafwGDs?si=KBR94UFrty_E30EY)
+  para una discusión informal en el contexto de resultados matemáticos.
 
 Pensemos además en las diferencias entre la forma tradicional de presentar un resultado
 científico y de presentar un proyecto de _software_. Muchas veces, el estado del _software_
