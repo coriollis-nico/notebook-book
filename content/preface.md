@@ -1,4 +1,4 @@
-# Cuadernos Computacionales y Física
+# Introducción
 
 Mi objetivo con estas notas es enseñar a estudiantes de licenciatura en física a usar
 las herramientas estándar de Python para escribir cuadernos computacionales para
