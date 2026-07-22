@@ -57,10 +57,6 @@ en física.
   porque no me gustan, pero si quien lee este documento tiene una referencia preferida,
   probablemente le funcionará muy bien también.
 
-[^py]: Tal vez un curso de Codecademy, o un libro como
-  [Python Crash Course (Matthes, 3a ed.)](https://nostarch.com/python-crash-course-3rd-edition)
-  (_yo no lo he leído_, pero se ve bien).
-
 - **Uso de la terminal** de tu sistema operativo
 
   Si usas Linux o WSL, recomiendo
@@ -77,8 +73,12 @@ No puedo evitar que uses "inteligencia artificial"
 en tus proyectos, pero puedo invitarte a que tú leas la documentación oficial y que
 intentes hacer las cosas tú mismo **antes** de recurrir al _chatbot_.[^IA]
 
+[^py]: Tal vez un curso de Codecademy, o un libro como
+  [Python Crash Course (Matthes, 3a ed.)](https://nostarch.com/python-crash-course-3rd-edition)
+  (_yo no lo he leído_, pero se ve bien).
+
 [^IA]: El costo de usar _chatbots_ con demasiada frecuencia es llamado
-  *deuda cognitiva*. Ver, por ejemplo, [el famoso estudio realizado por MIT](https://youtu.be/7pqF90rstZQ?si=3YSJ9I_4PLZuC8vu)
+  *deuda cognitiva*. Ver, por ejemplo, [el famoso estudio realizado por MIT](https://www.media.mit.edu/projects/your-brain-on-chatgpt/overview/)
   en contextos académicos y [esta discusión](https://youtu.be/HTUh0OO6Kmo?si=IZIKbP6Ri3nkkWWf) en contextos
   de programación.
 
