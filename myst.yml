@@ -2,7 +2,7 @@
 version: 1
 project:
   id: 2eab5fc1-c9de-4bb7-adcd-e046f3418cc1
-  title: Cuadernos Computacionales y Física
+  title: Física en Cuadernos Computacionales
   description: Usando Python y Jupyter para presentar soluciones a problemas de física
   keywords: [física, python, jupyter, matplotlib, numpy, scipy]
   authors:
@@ -48,7 +48,9 @@ project:
     equations: false
 site:
   template: book-theme
+  parts:
+    footer: foot.md
   options:
     favicon: favicon/favicon.ico
     logo: favicon/android-chrome-512x512.png
-    logo_text: Cuadernos Computacionales y Física
+    logo_text: Física en Cuadernos Computacionales
