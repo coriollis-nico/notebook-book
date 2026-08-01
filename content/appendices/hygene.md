@@ -10,4 +10,14 @@ Recomiendo a todo mundo leer @Datseris2025. Fue el contenido más informativo pa
 
 - Crear ambientes reproducibles para cada proyecto.
 
+- Escribe código reusable en funciones.
+
+- Documenta tu código (escribe *docstrings* para tus funciones).
+
+- Incorpora formas de atrapar errores.
+
+- Usa sugerencias de tipo.
+
+- Investiga un poco sobre cómo implementar funciones y algoritmos eficientemente.
+
 - Reinicia y ejecuta tu _notebook_ en orden para haver pruebas y verificar tus resultados.
