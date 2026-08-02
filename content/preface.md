@@ -1,3 +1,8 @@
+::: {warning} Este sitio está en construcción
+Esta guía está incompleta. Esta advertencia será removida cuando crea que está en un
+estado útil, y aún después tomará un tiempo en alcanzar un estado "pulido".
+:::
+
 # Introducción
 
 Mi objetivo con estas notas es enseñar a estudiantes de licenciatura en física a usar
