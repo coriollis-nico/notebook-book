@@ -39,6 +39,7 @@ project:
             - file: content/maintext/chapter02/examples/05_pendulum_pt1.ipynb
             - file: content/maintext/chapter02/examples/06_pendulum_pt2.ipynb
             - file: content/maintext/chapter02/examples/07_matrices.ipynb
+        - file: content/maintext/chapter02/numsci.ipynb
     - file: content/appendices/appendices.md
       children:
         - file: content/appendices/numerics.md
